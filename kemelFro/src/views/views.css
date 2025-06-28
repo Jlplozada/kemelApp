@@ -1,0 +1,5 @@
+@import './inicio/inicio.css';
+@import './catalogo/catalogo.css';
+@import './sesion/login.css';
+@import './sesion/registro.css';
+@import './carrito/carrito.css';
