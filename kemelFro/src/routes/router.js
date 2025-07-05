@@ -5,6 +5,7 @@ import { carritoControlador } from "../views/carrito/carritoControlador.js";
 import { registroControlador } from "../views/sesion/registroControlador.js";
 import { loginControlador } from "../views/sesion/loginControlador.js";
 
+
 const routes = {
    "":{
     "template": "../views/inicio/inicio.html",
@@ -33,6 +34,10 @@ const routes = {
    cuenta: {
     "template": "../views/sesion/login.html",
     controlador: loginControlador
+   },
+   gestorcatalogo:{
+    "template": "../views/gestorCatalogo/gestorCatalogo.html",
+    controlador: gestorCatalogoControlador
    }
 };
 

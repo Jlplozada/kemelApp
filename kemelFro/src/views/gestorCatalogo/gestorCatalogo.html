@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestor de Catálogo</title>
+    <link rel="stylesheet" href="../../components/components.css">
+    <link rel="stylesheet" href="../../views/views.css">
+    <style>
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background: #f4f4f4; }
+        .acciones button { margin-right: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Gestor de Catálogo</h1>
+    <button id="btnAgregar">Agregar Producto</button>
+    <table id="tablaProductos">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Imagen</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Productos aquí -->
+        </tbody>
+    </table>
+
+    <!-- Modal para agregar/editar -->
+    <div id="modalProducto" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); justify-content:center; align-items:center;">
+        <form id="formProducto" style="background:#fff; padding:20px; border-radius:8px; min-width:300px;">
+            <h2 id="modalTitulo">Agregar Producto</h2>
+            <input type="hidden" id="productoId">
+            <div>
+                <label>Nombre:</label>
+                <input type="text" id="nombre" required>
+            </div>
+            <div>
+                <label>Precio:</label>
+                <input type="number" id="precio" required>
+            </div>
+            <div>
+                <label>Imagen:</label>
+                <input type="file" id="imagen">
+            </div>
+            <div style="margin-top:10px;">
+                <button type="submit">Guardar</button>
+                <button type="button" id="btnCancelar">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="gestorCatalogoControlador.js"></script>
+</body>
+</html>
